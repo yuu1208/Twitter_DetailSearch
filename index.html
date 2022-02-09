@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<!-- Made by yuu1208 -->
+<!-- 20210731 -->
+
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Detail Search</title>
+    <style>
+        html,body {
+            width: 100%;
+            margin: 0;
+            font-family: 'Noto Sans CJK JP',sans-serif;
+            background: #1976d2;
+           
+        }
+        div.wrapper {
+            width: 1000px;
+            height: 628px;
+            position: relative;
+            padding: 20px;
+            margin: 0 auto;
+        }
+        form {
+            width: 58%;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            filter: drop-shadow(0px 0px 5px#666);
+            animation: apploach 0.75s;
+        }
+        @keyframes apploach {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                margin-top: 20px;
+                opacity: 0;
+            }
+            100% {
+                margin-top: 0;
+                opacity: 1;
+            }
+        }
+        input[type=text] {
+            width: 500px;
+            height: 50px;
+            border: 0;
+            outline: none;
+            border-bottom: 1px solid #333;
+            background-color: inherit;
+            font: 400 20px 'Noto Sans CJK JP';
+            color: #555;
+        }
+        input[type=button] {
+            width: 160px;
+            height: 50px;
+            margin: 10px 0px;
+            font: 400 22px 'Noto Sans CJK JP';
+            background: #1976d2;
+            color: white;
+            border: 0;
+            border-radius: 10px;
+            transition: all 0.2s ease;
+        }
+        input[type=button]:hover {
+            background: #0856a4;
+        }
+        select {
+            width: 240px;
+            height: 40px;
+            border: 0;
+            font-size: 20px;
+            outline: none;
+        }
+    </style>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div class="wrapper">
+            <form method="get" name="form">
+                <h1>Twitter Detail Search</h1>
+                <p>* Required</p>
+                <p><input type="text" name="id" placeholder="User ID*"></p>
+                <p><input type="text" name="since" placeholder="Since（XXXX-XX-XX）"></p>
+                <p><input type="text" name="until" placeholder="Until（XXXX-XX-XX）"></p>
+                <p><input type="text" name="word" placeholder="Word"></p>
+
+                <p><input type="button" value="Run" onclick="run()"></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
